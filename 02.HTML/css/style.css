@@ -1,0 +1,70 @@
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
+
+.menu {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.menu-footer {
+    width: 25%;
+    justify-content: flex-start;
+}
+
+.menu-title {
+    margin-bottom: auto;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.menu-subtitle {
+    margin-bottom: auto;
+    font-size: 18px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.menu-body {
+    height: 400px;
+    margin: 8px;
+}
+
+.home-body {
+    display: inline-flex;
+    align-items: center;
+}
+
+.home-cake {
+    margin: auto;
+    margin-right: 16px;
+}
+
+.cakes-grid {
+    width: 100%;
+}
+
+.custom-cakes {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.request-for-quote {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.administration {
+    width: 100%;
+    margin-top: 16px;
+}
