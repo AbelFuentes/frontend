@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vaccination</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script src="components/app-header.js" type="text/javascript" defer></script>
+    <script src="components/app-footer.js" type="text/javascript" defer></script>
+    <script src="components/app-vaccine-brands.js" type="text/javascript" defer></script>
+    <script src="components/app-why-vaccine.js" type="text/javascript" defer></script>
+    <script src="components/app-before-vaccine.js" type="text/javascript" defer></script>
+    <script src="components/app-emergency-contact.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <app-header />
+    </div>
+    <div class="hero">
+      <main class="hero__left">
+        <h1 class="hero__title">Fight Virus With Vaccines</h1>
+        <p class="hero__description">Let's stop this pandemic by killing the virus with a vaccine, don't let yourself and your family get infected</p>
+        <div class="hero__features">
+          <div class="hero__feature">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path d="m18.54 4.12-5.5-2.06a3.48 3.48 0 0 0-2.07 0l-5.5 2.06a3.18 3.18 0 0 0-1.92 2.77v8.1c0 .81.53 1.88 1.18 2.36l5.5 4.11c.97.73 2.56.73 3.53 0l5.5-4.11a3.34 3.34 0 0 0 1.18-2.36v-8.1a3.16 3.16 0 0 0-1.9-2.77Zm-3.06 5.6-4.3 4.3c-.15.15-.34.22-.53.22s-.38-.07-.53-.22l-1.6-1.62a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.08 1.08 3.77-3.77a.75.75 0 0 1 1.06 0c.29.29.29.78-.01 1.07Z" fill="#f7d308"/>
+              </svg>
+            </div>
+            <p>Best Protection</p>
+          </div>
+          <div class="hero__feature">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path d="M5.74 16a1.87 1.87 0 0 0-.44-1.54l-2.43-2.43c-.76-.76-1.06-1.57-.84-2.27.23-.7.94-1.18 2-1.36l3.12-.52c.45-.08 1-.48 1.21-.89l1.72-3.45C10.58 2.55 11.26 2 12 2s1.42.55 1.92 1.54l1.72 3.45c.13.26.4.51.69.68L5.56 18.44c-.14.14-.38.01-.34-.19L5.74 16Zm12.96-1.54a1.81 1.81 0 0 0-.44 1.54l.69 3.01c.29 1.25.11 2.2-.51 2.64a1.5 1.5 0 0 1-.9.27 3.6 3.6 0 0 1-1.77-.58l-2.93-1.74a1.84 1.84 0 0 0-1.68 0l-2.93 1.74c-1.11.65-2.06.76-2.67.31-.23-.17-.4-.4-.51-.7L17.21 8.8a1.98 1.98 0 0 1 1.74-.56l1.01.17c1.06.18 1.77.66 2 1.36.22.7-.08 1.51-.84 2.27l-2.42 2.43Z" fill="#f7d308"/>
+              </svg>
+            </div>
+            <p>Selected Vaccines</p>
+          </div>
+        </div>
+      </main>
+      <div class="hero__right"><img class="hero__image" src="./img/female-nurse.jpg" alt="front view female nurse white medical suit with red mask injection her hands blue"></div>
+    </div>
+    <section><app-vaccine-brands /></section>
+    <section><app-why-vaccine /></section>
+    <section><app-before-vaccine /></section>
+    <section><app-emergency-contact /></section>
+    <app-footer />
+  </body>
+</html>
+
+
