@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="./assets//pokeball.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/base.css">
+        <title>Pokedes LaunchX</title>
+    </head>
+    <body>
+        <section class="browser">
+            <div class="browser-container">
+                <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="pokemon_name"
+                    name="pokemon_name"
+                    placeholder="Pokemon"
+                />
+                <button type="button" class="btn btn-raised btn-success btn-sm" onclick="get_pokemon()">
+                    Find
+                </button>
+            </div>
+        </section>
+        <section class="pokedex">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h2 id="pokedex_header"># - </h2>
+                    </div>
+                </div>
+                <div class="row pokedex-container">
+                    <div class="col-xs-12 col-md-4 pokedex-image-container">
+                        <div class="pokedex-image-side">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="pokedex-image">
+                            <img src="./assets/pokeball.png" alt="Pokemon" id="pokedex_image" width="150px" height="150px" />   
+                        </div>
+                        <div class="pokedex-image-side" style="text-align: right;">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 pokemon-types">
+                        <div class="pokemon-types-and-weakness" style="height: 60px">
+                            <label>Types:</label>
+                            <div style="margin-top: 12px;">
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="pokemon_type_primary" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="pokemon_type_secondary" width="70" height="70" />
+                            </div>
+                        </div>
+                        <div class="pokemon-types-and-weakness" style="height: 75px; margin-bottom: 0;">
+                            <label>Weakness:</label>
+                            <div style="margin-top: 12px;">
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="first_pokemon_type_weakness" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="second_pokemon_type_weakness" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="third_pokemon_type_weakness" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="fourth_pokemon_type_weakness" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="fifth_pokemon_type_weakness" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="sixth_pokemon_type_weakness" width="70" height="70" />
+                                <img src="./assets/no-type.png" alt="pokemon_type" id="seventh_pokemon_type_weakness" width="70" height="70" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 pokemon-stats">
+                        <div class="pokemon-stats-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <label>HP</label>
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <progress id="pokemon_hit_points" value="0" max="100"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <label>ATK</label>
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <progress id="pokemon_attack" value="0" max="100"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <label>DEF</label>
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <progress id="pokemon_defense" value="0" max="100"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <label>SP. ATK</label>
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <progress id="pokemon_special_attack" value="0" max="100"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <label>SP. DEF</label>
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <progress id="pokemon_special_defense" value="0" max="100"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-3">
+                                    <label>SPD</label>
+                                </div>
+                                <div class="col-xs-12 col-md-9">
+                                    <progress id="pokemon_speed" value="0" max="100"></progress>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pokemon-moves">
+                    <h3>Moves</h3>
+                    <div class="pokemon-moves-container">
+                        <ul id="pokemon_moves"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <script src="./index.js"></script>
+    </footer>
+</html>

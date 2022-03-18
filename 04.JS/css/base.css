@@ -1,0 +1,141 @@
+body {
+    background: url('../assets/background.jpg');
+}
+
+input {
+    margin-right: 8px;
+}
+
+h2, h3 {
+    color: #FFFFFF;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    columns: 5;
+    -moz-columns: 5;
+    -webkit-columns: 5;
+    list-style-type: none;
+}
+
+ul > li {
+    margin: 2px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.browser {
+    width: 50%;
+    margin: auto;
+    padding: 8px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #BD0F34;
+    border: 2px solid #000000;
+}
+
+.browser-container {
+    width: 100%;
+    padding: 8px;
+    display: inline-flex;
+}
+
+.pokedex {
+    width: 75%;
+    margin: auto;
+    padding: 8px;
+    margin-top: 8px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    background-color: #BD0F34;
+    border: 2px solid #000000;
+}
+
+.pokedex-container {
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #99161A;
+}
+
+.pokedex-image-container {
+    padding: 4px;
+    border-radius: 5px;
+    display: inline-flex;
+    background-color: #CDCDCD;
+    border: 2px solid #000000;
+}
+
+.pokedex-image {
+    width: 225px;
+    margin: 4px auto;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+}
+
+.pokedex-image-side {
+    display: grid;
+    min-width: 16px;
+    max-width: 40px;
+    align-content: space-between;
+}
+
+.pokemon-types {
+    padding: 8px;
+    display: grid;
+    border-radius: 5px;
+    background-color: #99161A;
+    align-content: space-between;
+}
+
+.pokemon-types-and-weakness {
+    padding: 5px;
+    min-height: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.pokemon-types-and-weakness > label {
+    top: 0;
+    left: 0;
+    padding-left: 4px;
+    position: absolute;
+}
+
+.pokemon-stats {
+    padding: 8px;
+    text-align: left;
+}
+
+.pokemon-stats-container {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.pokemon-stats-container > .row > .col-md-9 {
+    text-align: right;
+}
+
+.pokemon-moves {
+    background-color: #99161A;
+}
+
+.pokemon-moves-container {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
