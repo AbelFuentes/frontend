@@ -139,3 +139,11 @@ label {
     border: 1px solid #000000;
     background-color: #FFFFFF;
 }
+
+@media (max-width: 960px) {
+    ul {
+        columns: 2;
+        -moz-columns: 2;
+        -webkit-columns: 2;
+    }
+}
